@@ -13,7 +13,10 @@ from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, ReplyKeyboardRemo
 import os
 
 TOKEN = os.getenv("BOT_TOKEN", "").strip()
-ADMIN_ID = int(os.getenv("ADMIN_ID", "0"))
+ADMIN_ID = 1606381134  # твой Telegram ID (админ)
+
+if not TOKEN:
+    raise RuntimeError("BOT_TOKEN is empty. Set BOT_TOKEN env var.")
 
 if not TOKEN:
     raise RuntimeError("BOT_TOKEN is empty. Set BOT_TOKEN env var.")
